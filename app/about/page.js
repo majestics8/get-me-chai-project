@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 
 const page = () => {
     return (
@@ -7,7 +8,7 @@ const page = () => {
   {/* Header Section */}
   <div className="flex items-center justify-center gap-3 mb-8">
     <h1 className="text-3xl font-extrabold text-teal-700">About Get Me a Chai</h1>
-    <img className="w-16 h-16 object-contain" src="/tea.gif" alt="Chai gif" />
+    <Image height={77} width={77} className="w-16 h-16 object-contain" src="/tea.gif" alt="Chai gif" />
   </div>
 
   {/* Section */}

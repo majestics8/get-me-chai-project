@@ -3,6 +3,7 @@ import React from 'react'
 import Link from 'next/link'
 import { useSession, signIn, signOut } from "next-auth/react"
 import { useState } from 'react'
+import Image from 'next/image'
 
 const Navbar = () => {
   const [showdropdown, setshowdropdown] = useState(false)
@@ -24,7 +25,7 @@ const Navbar = () => {
 
       <div className='flex items-center justify-between px-4 py-2 w-full md:w-fit'>
         <Link href={'/'} className='logo font-bold text-xl flex items-center'>
-          <img className='pb-1' src="tea.gif" width={44} alt="" />
+          <Image className='pb-1' src="/tea.gif" width={44} height={20} alt="" />
           <span>GetMeChai</span>
         </Link>
 

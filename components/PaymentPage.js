@@ -4,6 +4,7 @@ import Script from 'next/script'
 import { initiate, fetchuser, fetchpayment } from '@/actions/useractions'
 import { useState } from 'react'
 import { useEffect } from 'react'
+import Image from 'next/image'
 
 
 
@@ -68,16 +69,16 @@ const Paymentpage = ({ username }) => {
     <>
       <Script src="https://checkout.razorpay.com/v1/checkout.js"></Script>
       <div className="relative">
-        <img
-          height={350}
+        <Image
+          height={90} width={350}
           className="object-cover w-full"
           src="https://c10.patreonusercontent.com/4/patreon-media/p/campaign/4842667/452146dcfeb04f38853368f554aadde1/eyJ3Ijo5NjAsIndlIjoxfQ%3D%3D/18.gif?token-hash=fmewZH-BgnFN7dTnFkQbwLI_ezETy720wuqlUU_jmK4%3D&token-time=1748995200"
           alt=""
         />
         {/* profile pic */}
         {currentuser?.profilepic && (
-          <img
-            width={150}
+          <Image
+            width={150} height={150}
             className="size-24 md:size-28 border-4 border-white rounded-full absolute left-1/2 -translate-x-1/2 -bottom-26"
             src={currentuser.profilepic}
             alt="Profile"
@@ -104,7 +105,7 @@ const Paymentpage = ({ username }) => {
               {payment.map((item, index) => {
                 return (
                   <li key={index} className="flex items-center my-4 gap-2">
-                    <img className="bg-slate-500 rounded-full" src="avatar.gif" width={25} alt="" />
+                    <Image className="bg-slate-500 rounded-full" src="/avatar.gif" width={25} height={25} alt="" />
                     <span>
                       {item.name} donated <span className="font-bold">{item.amount} rs</span> with message: {item.message}
                     </span>

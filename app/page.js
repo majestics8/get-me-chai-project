@@ -1,10 +1,11 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   return (
     <>
       <div className="text-white flex flex-col items-center justify-center h-[40vh]">
-        <div className=" font-bold text-3xl md:text-5xl flex items-center gap-2">Get Me A Chai <img className="pb-2" src="/tea.gif" width={77} alt="" /></div>
+        <div className=" font-bold text-3xl md:text-5xl flex items-center gap-2">Get Me A Chai <Image className="pb-2" src="/tea.gif" width={77} height={77} alt="" /></div>
         <p className="flex text-center">The basic definition of funding is any money that is provided, usually by a business, an organization, or a government .</p>
         <div>
           {/* buttons */}
@@ -42,17 +43,17 @@ export default function Home() {
         <h1 className="text-white text-3xl font-bold text-center my-10">Yours fan can buy you a chai</h1>
         <div className="flex justify-around gap-5 flex-col md:flex-row">
           <div className="item space-y-3 flex flex-col items-center justify-center">
-            <img className="bg-slate-800 rounded-full p-2" src="/man.gif" width={66} alt="" />
+            <Image className="bg-slate-800 rounded-full p-2" src="/man.gif" width={66} height={66} alt="" />
             <p className="text-center font-bold">Fund Your Self</p>
             <p className="text-center">your each Fund matters</p>
           </div>
           <div className="item space-y-3 flex flex-col items-center justify-center">
-            <img className="bg-slate-800 rounded-full p-2" src="/coin.gif" width={66} alt="" />
+            <Image className="bg-slate-800 rounded-full p-2" src="/coin.gif" width={66} height={66} alt="" />
             <p className=" font-bold">Money value</p>
             <p className="text-center">Give as much as possible</p>
           </div>
           <div className="item space-y-3 flex flex-col items-center justify-center">
-            <img className="bg-slate-800 rounded-full p-2" src="/group.gif" width={66} alt="" />
+            <Image className="bg-slate-800 rounded-full p-2" src="/group.gif" width={66} height={66} alt="" />
             <p className=" font-bold">Fans Want To Help</p>
             <p className="text-center">Your fans are available to help you</p>
           </div>
