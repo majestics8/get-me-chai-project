@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation'
 import { useEffect } from 'react'
 
 
-const login = () => {
+const Login = () => {
   //1st way to push the page on dashboard
   // const { data: session, status } = useSession();
   // const router = useRouter();
@@ -165,4 +165,4 @@ const login = () => {
   )
 }
 
-export default login
+export default Login
