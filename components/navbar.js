@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { useSession, signIn, signOut } from "next-auth/react"
 import { useState } from 'react'
 
-const navbar = () => {
+const Navbar = () => {
   const [showdropdown, setshowdropdown] = useState(false)
   const [menuopen, setmenuopen] = useState(false)
   const { data: session } = useSession()
@@ -140,4 +140,4 @@ const navbar = () => {
   )
 }
 
-export default navbar
+export default Navbar

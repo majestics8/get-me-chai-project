@@ -7,7 +7,7 @@ import { fetchuser, updateprofile } from '@/actions/useractions'
 import { ToastContainer, toast } from 'react-toastify'
 
 
-const dashboard = () => {
+const Dashboard = () => {
     const [form, setform] = useState({})
 
     //1st way to push page on loggn page
@@ -122,4 +122,4 @@ const dashboard = () => {
     )
 }
 
-export default dashboard
+export default Dashboard

@@ -22,7 +22,7 @@ const Paymentpage = ({ username }) => {
   }
 
   useEffect(() => {
-    getdata()
+    getdata();
   }, [])
 
   const getdata = async () => {
