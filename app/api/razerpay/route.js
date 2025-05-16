@@ -1,4 +1,4 @@
-import payment from "@/models/payment";    //callback url
+import Payment from "@/models/payment";    //callback url
 import user from "@/models/user";
 import connectDb from "@/db/connectDb";
 import { NextResponse } from "next/server";
@@ -11,7 +11,7 @@ export const POST = async (req)=>{
     let body=await req.formData()
     body=Object.fromEntries(body)
 
-    let p = await payment.findOne({oid: body.razorpay_order_id})
+    let p = await Payment.findOne({oid: body.razorpay_order_id})
     if(!p){
         return NextResponse.json({success: false, message:"Order Id not found"})
     }
@@ -25,7 +25,7 @@ export const POST = async (req)=>{
     let xx = validatePaymentVerification({"order_id": body.razorpay_order_id, "payment_id": body.razorpay_payment_id}, body.razorpay_signature, secret)
 
     if((xx)){
-    const updatedPayment = await payment.findOneAndUpdate({oid: body.razorpay_order_id}, {done:true}, {new: true})
+    const updatedPayment = await Payment.findOneAndUpdate({oid: body.razorpay_order_id}, {done:true}, {new: true})
          return NextResponse.redirect(`${process.env.NEXT_PUBLIC_URL}/${updatedPayment.to_user}?paymentdone=true`)   
     }
     else{   

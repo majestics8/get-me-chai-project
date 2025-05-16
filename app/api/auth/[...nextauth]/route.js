@@ -1,7 +1,7 @@
 import NextAuth from 'next-auth'
 import GithubProvider from "next-auth/providers/github"
 import connectDb from '@/db/connectDb'
-import payment from '@/models/payment'
+import Payment from '@/models/payment'
 import User from '@/models/user'
 import mongoose from 'mongoose'
 
